@@ -1,6 +1,6 @@
 @import "variables";
 
-// 🔹 IMAGE + TEXTE
+// Ici mon code pour le texte et l'image 
 .section-menme {
   display: flex;
   align-items: center;
@@ -43,7 +43,7 @@ h1 {
   padding-top: 50px;
 }
 
-// 🔹 COMPÉTENCES
+// Code pour les compétences 
 .technologies {
   width: 100%;
   padding: 2rem;
@@ -56,7 +56,7 @@ h1 {
     gap: 1.5rem;
     width: max-content;
     animation: scroll-track 30s linear infinite;
-    overflow-x: hidden; // ❌ cache la barre en desktop
+    overflow-x: hidden; 
     scrollbar-width: none;
     -ms-overflow-style: none;
 
@@ -124,7 +124,7 @@ body {
   overflow-x: hidden;
 }
 
-// 🔹 RESPONSIVE
+// Début de mon code pour rendre la page reponsive 
 @media (max-width: 1024px) {
   .section-menme {
     flex-direction: column;
@@ -153,7 +153,7 @@ body {
     overflow-x: auto;
 
     .track {
-      overflow-x: auto; // ✅ scroll horizontal visible uniquement en responsive
+      overflow-x: auto; 
       animation: scroll-track 30s linear infinite;
     }
 
