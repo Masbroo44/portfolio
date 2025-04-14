@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css" />
+  <title>À propos</title>
+</head>
+<body>
+
+  <section class="section-menme">
+    <div>
+      <img src="img/IMG_0568.JPG" alt="me" class="photo" />
+    </div>
+  
+    <div class="text">
+      <h1> Moi et encore moi</h1>
+      Bonjour, moi c’est Samuel, 18 ans, étudiant en ingénierie numérique à l’Efrei Paris, passionné par le code, la logique, et les petites erreurs qui te font recompiler 48 fois pour rien.
+
+      Je développe des applis, des sites, des jeux textuels chelous en C (oui, Totally Spies, c’est du sérieux), et des simulateurs de combat Pokémon — j’appelle ça de la recherche avancée en POO, mais c’est aussi pour le fun. Actuellement, je bosse sur une app web pour ma team de trading, parce que j’aime bien jongler entre les balises HTML et les bougies japonaises.
+      
+      Je suis curieux, motivé, et prêt à apprendre tout ce qu’on ne m’a pas encore appris — ce qui est, je l’avoue, un paquet de trucs. Mon objectif ? Progresser, apporter de la valeur, éviter de casser les serveurs (si possible), et pourquoi pas un jour, combiner tout ça avec la finance de marché.
+      
+      Bref, je suis chaud. Et je suis là pour bosser.
+    </div>
+  </section>
+  
+  <h1 class="title-skills">Mes super compétences</h1>
+
+  <section class="technologies">
+    <div class="track">
+      <div class="cartes">
+        <span>Développement Web</span>
+        <img src="img/html5.svg" alt="html" class="icon"/>
+        <img src="img/css.svg" alt="css" class="icon"/>
+        <img src="img/javascript.svg" alt="js" class="icon"/>
+      </div>
+      <div class="cartes">
+        <span>DATA</span>
+        <img src="img/jmeriseB.png" alt="jmerise" class="icon"/>
+        <img src="img/mysql.svg" alt="Mysql" class="icon"/>
+      </div>
+      <div class="cartes">
+        <span>Programmation</span>
+        <img src="img/python.svg" alt="python" class="icon"/>
+        <img src="img/java-logo-black-and-white-1.png" alt="java" class="icon"/>
+        <img src="img/c.svg" alt="c" class="icon"/>
+      </div>
+      <div class="cartes">
+        <span>Collaboration</span>
+        <img src="img/git.svg" alt="git" class="icon"/>
+        <img src="img/github.svg" alt="github" class="icon"/>
+      </div>
+      <div class="cartes">
+        <span>Systèmes d'exploitation & Hardware</span>
+        <img src="img/linux.svg" alt="Linux" class="icon"/>
+        <img src="img/windows-brands.svg" alt="windows" class="icon"/>
+        <img src="img/macos.svg" alt="MacOS" class="icon"/>
+        <img src="img/pcgamingwiki.svg" alt="hardware" class="icon"/>
+      </div>
+      <div class="cartes">
+        <span>Outils Bureautiques & Graphiques</span>
+        <img src="img/photoshop.png" alt="Photoshop" class="icon"/>
+        <img src="img/AI.png" alt="Illustrator" class="icon"/>
+        <img src="img/figma-brands.svg" alt="Figma" class="icon"/>
+        <img src="img/office.png" alt="Pack Office" class="icon"/>
+        <img src="img/canva.svg" alt="Canva" class="icon"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script pour dupliquer automatiquement les cartes -->
+  <script>
+    const track = document.querySelector('.track');
+    const cards = Array.from(track.children);
+    cards.forEach(card => {
+      const clone = card.cloneNode(true);
+      track.appendChild(clone);
+    });
+  </script>
+  
+  <button class="exit-btn" onclick="window.location.href='index.html'">Exit</button>
+
+</body>
+</html>

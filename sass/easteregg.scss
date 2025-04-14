@@ -1,0 +1,20 @@
+@import "variables";
+.suprise{
+  text-align: center;
+  margin-top: 2rem;
+
+  #suprise-samourai{
+    background: transparent;
+    border: 1px solid transparent;
+    color: transparent;
+    caret-color: black;
+    outline: none;
+    }
+  
+    #ghost{
+      width: 100px;
+      margin-top: 1rem;
+      display: none;
+    }
+
+}

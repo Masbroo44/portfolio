@@ -1,0 +1,22 @@
+@import "variables";
+
+.profilePicture{
+  text-align: center;
+  margin : 2rem;
+
+
+.photo{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid $box-color;
+  }
+}
+
+#name{
+  text-align: center;
+  color: $text-color;
+  font: $font-main;
+  justify-content: center;
+  font-size: 1.5rem;
+}

@@ -1,0 +1,220 @@
+@import "variables";
+
+// 🔹 IMAGE + TEXTE
+.section-menme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+
+  div:first-child {
+    display: grid;
+    align-items: center;
+    justify-content: start;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .photo {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    display: block;
+    padding-left: 280px;
+    margin-top: 50px;
+  }
+
+  .text {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-family: $font-main;
+    color: $text-color;
+    flex: 1;
+    margin-top: -100px;
+  }
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  padding-top: 50px;
+}
+
+// 🔹 COMPÉTENCES
+.technologies {
+  width: 100%;
+  padding: 2rem;
+  background-color: $bg-color;
+  padding-top: 100px;
+
+  .track {
+    display: flex;
+    white-space: nowrap;
+    gap: 1.5rem;
+    width: max-content;
+    animation: scroll-track 30s linear infinite;
+    overflow-x: hidden; // ❌ cache la barre en desktop
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .cartes {
+    min-width: 250px;
+    flex-shrink: 0;
+    background: $box-color;
+    border: 1px solid $bubles-color1;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: $text-color-2;
+    font-family: $font-main;
+
+    span {
+      font-weight: bold;
+      text-align: center;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+  }
+}
+
+@keyframes scroll-track {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.title-skills {
+  text-align: center;
+  font-family: $font-main;
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: $text-color;
+}
+
+.icon {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+// 🔹 RESPONSIVE
+@media (max-width: 1024px) {
+  .section-menme {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+
+    div:first-child {
+      justify-content: center;
+    }
+
+    .photo {
+      padding-left: 0;
+      margin-top: 0;
+      max-width: 220px;
+    }
+
+    .text {
+      margin-top: 0;
+      padding: 0 1rem;
+    }
+  }
+
+  .technologies {
+    padding: 1.5rem;
+    overflow-x: auto;
+
+    .track {
+      overflow-x: auto; // ✅ scroll horizontal visible uniquement en responsive
+      animation: scroll-track 30s linear infinite;
+    }
+
+    .cartes {
+      min-width: 200px;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  h1,
+  .title-skills {
+    font-size: 1.5rem;
+  }
+
+  .photo {
+    max-width: 200px;
+  }
+
+  .technologies {
+    padding: 1rem;
+
+    .track {
+      gap: 1rem;
+    }
+
+    .cartes {
+      padding: 0.8rem;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .section-menme {
+    max-width: 1400px;
+    margin: auto;
+  }
+
+  .technologies {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
+
+.exit-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: $box-color;
+  color: $text-color-2;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  font-family: $font-main;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: lighten($box-color, 10%);
+  }
+}
